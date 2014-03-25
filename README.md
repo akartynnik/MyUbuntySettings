@@ -1,4 +1,4 @@
-# Репа с моими настроками Ubuntu 13.04 и софта
+# Настроки Ubuntu 13.04 и софта
 
 #### Пути для файлов
 `~/.bash_aliases`   
@@ -6,7 +6,7 @@
 `/bin/tmux-session`  
   
 #### Настройка Sublima Tex 3
-  Скопировать содержимое **Sublima Text 3 - User Preference** в *Prefersnces -> Settings-User* (меню программы)
+Скопировать содержимое **Sublima Text 3 - User Preference** в *Prefersnces -> Settings-User* (меню программы)
   
 #### Настройка алиасов:
  *Создать и(или) дописать в .bash_aliases:*
@@ -16,4 +16,8 @@
 * `alias rappo='cd ~/work/ruby/Apps/sample_app && subl .'`  
  
 > После сохраниения *.bash_aliases* для вступления в силу новых алиасов необходимо перезапустить терминал
+
+#### Настройка tmux:
+Скопировать файл *.tmux.conf* из данного репозитория в папку, указанную выше.  
+Команда (из папки с файлом): `mv .tmux.conf ~/`
   
