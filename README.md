@@ -48,6 +48,6 @@
 > Практически во всех сокращениях сначало жмем hostkey, затем отпускаем и жмем второй символ
 
 ######Hot-keys terminal:
-* `Ctrl-b` - default hostkey  
-* `Ctrl-q` - custom hostkey  
+* `Ctrl-Shift-c` - оборвать текущую операцию  
+* `Ctrl-Shift-d` - убить или выйти из текущей программы (задачи)
   
