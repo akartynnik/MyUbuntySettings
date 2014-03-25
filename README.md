@@ -49,5 +49,9 @@
 
 ######Hot-keys terminal:
 * `Ctrl-Shift-c` - оборвать текущую операцию  
-* `Ctrl-Shift-d` - убить или выйти из текущей программы (задачи)
+* `Ctrl-Shift-d` - убить или выйти из текущей программы (задачи)  
+
+
+
+http://brainscraps.wikia.com/wiki/Resurrecting_tmux_Sessions_After_Reboot
   
