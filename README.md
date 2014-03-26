@@ -24,6 +24,7 @@
 `alias rappo='cd ~/work/ruby/Apps/sample_app && subl .'`  
 `alias tmux-k='tmux kill-session'`
 `alias tmux-ko='tmux kill-server'`
+`alias tmux-l='tmux ls'`
  
 > После сохраниения *.bash_aliases* для вступления в силу новых алиасов необходимо перезапустить терминал
 
