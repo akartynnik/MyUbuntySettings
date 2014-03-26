@@ -37,13 +37,24 @@
 * `tmux new -s _name_` - создаем новую сессию с именем *_name_*
 
 ######Hot-keys tmux:
-* `Ctrl-b` - default hostkey  
-* `Ctrl-q` - custom hostkey  
-* `hostkey  d` - deattach (отключение от сессии)  
+* `Ctrl-b` - default hostkey
+* `Ctrl-q` - custom hostkey
+*
+* `hostkey  c` - создать новое окно
+* `hostkey  1..9` - переключение между окнами по номерам
+* `hostkey p` - previous window
+* `hostkey n` - next window
+* `hostkey l` - ‘last’ (previously used) window
+* `hostkey w` - choose window from a list
+* `hostkeya ,` - rename the current window
+* `hostkeya &`  - kill the current window
+* 
 * `hostkey  |`- разделение текущего окна по горизонтали  
-* `hostkey  -` - разделение текущего окна по вертикали  
-* `hostkey стрелки (одно нажатие)` - перемешение между окнами  
+* `hostkey  -` - разделение текущего окна по вертикали 
+* `hostkey стрелки (одно нажатие)` - перемешение между панелями
 * `hostkey стрелки (много нажатий с удержанием hostkey)` - перемешение границ окна
+* 
+* `hostkey  d` - deattach (отключение от сессии)  
 
 > Практически во всех сокращениях сначало жмем hostkey, затем отпускаем и жмем второй символ
 
