@@ -1,7 +1,17 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"color_scheme": "Packages/User/Monokai Soda (SL).tmTheme",
 	"default_encoding": "UTF-8",
+	"font_face": "Meslo LG M DZ",
 	"font_size": 10,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"rulers":
+	[
+		78
+	],
+	//"spell_check": true,
 	"tab_size": 2,
-	"rulers": [78],
+	"theme": "Soda Dark.sublime-theme"
 }
