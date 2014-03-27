@@ -11,7 +11,9 @@
 `/bin/tmux-s`  
   
 #### Настройка Sublima Text 3
-Скопировать содержимое **Sublima Text 3 - User Preference** в *Prefersnces -> Settings-User* (меню программы)
+Скопировать содержимое **Sublima Text 3 - User Preference** в *Prefersnces -> Settings-User* (меню программы)  
+Так же прочитать статью http://vstarkov.ru/sublime-workflow/   
+Поставить Node.js & CSSComb JS
   
 #### Настройка алиасов:
  *Создать и(или) дописать в .bash_aliases:*  
