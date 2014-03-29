@@ -19,11 +19,11 @@ console_open_command="rails c"
 add_panes() {
   tmux split-window -h -t "${session_name}"
   tmux split-window -v -t "${session_name}"
-  tmux send-keys -t "${session_name}":"${first_window_name}".0 "${base_pane_command}" C-m
   tmux send-keys -t "${session_name}":"${first_window_name}".1 "${base_pane_command}" C-m
   tmux send-keys -t "${session_name}":"${first_window_name}".2 "${base_pane_command}" C-m
-  tmux send-keys -t "${session_name}":"${first_window_name}".1 "${server_start_comand}"
-  tmux send-keys -t "${session_name}":"${first_window_name}".2 "${tests_start_comand}"
+  tmux send-keys -t "${session_name}":"${first_window_name}".3 "${base_pane_command}" C-m
+  tmux send-keys -t "${session_name}":"${first_window_name}".2 "${server_start_comand}"
+  tmux send-keys -t "${session_name}":"${first_window_name}".3 "${tests_start_comand}"
 }
 
 #######################
@@ -39,25 +39,25 @@ tmux_session_start() {
 #######################
 # Rails server start
 rails_server_start() {
-  tmux send-keys -t "${session_name}":"${first_window_name}".1 C-m
+  tmux send-keys -t "${session_name}":"${first_window_name}".2 C-m
 }
 
 #######################
 # Guard start
 guard_tests_start() {
-  tmux send-keys -t "${session_name}":"${first_window_name}".2 C-m
+  tmux send-keys -t "${session_name}":"${first_window_name}".3 C-m
 }
 
 #######################
 # Open project in Sublime Text
 open_project() {
-  tmux send-keys -t "${session_name}":"${first_window_name}".0 "${project_open_command}" C-m
+  tmux send-keys -t "${session_name}":"${first_window_name}".1 "${project_open_command}" C-m
 }
 
 #######################
 # Ruby console start
 ruby_console_start() {
-  tmux send-keys -t "${session_name}":"${first_window_name}".0 "${console_open_command}" C-m
+  tmux send-keys -t "${session_name}":"${first_window_name}".1 "${console_open_command}" C-m
 }
 
 #######################
@@ -111,7 +111,7 @@ done
 
 echo "Success!"
 tmux select-pane -L -t "${session_name}"
-tmux resize-pane -R -t "${session_name}":"${first_window_name}".0 25
+tmux resize-pane -R -t "${session_name}":"${first_window_name}".1 25
 tmux new-window  -n "${second_window_name}" -t "${session_name}"
 tmux select-window -t "${session_name}":"${first_window_name}"
 tmux attach -t "${session_name}"
