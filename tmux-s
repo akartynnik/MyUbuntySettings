@@ -7,17 +7,23 @@ flag='0'
 # Config Variables
 session_name="rails"
 first_window_name="first"
+second_window_name="second"
+base_pane_command="rapp && rapps"
+server_start_comand="rails s"
+tests_start_comand="guard"
+project_open_command="rappo"
+console_open_command="rails c"
 
 #######################
 # Addpanes
 add_panes() {
   tmux split-window -h -t "${session_name}"
   tmux split-window -v -t "${session_name}"
-  tmux send-keys -t "${session_name}":1.1 'rapp && rapps' C-m
-  tmux send-keys -t "${session_name}":1.2 'rapp && rapps' C-m
-  tmux send-keys -t "${session_name}":1.3 'rapp && rapps' C-m
-  tmux send-keys -t "${session_name}":1.2 'rails s'
-  tmux send-keys -t "${session_name}":1.3 'guard'
+  tmux send-keys -t "${session_name}":"${first_window_name}".0 "${base_pane_command}" C-m
+  tmux send-keys -t "${session_name}":"${first_window_name}".1 "${base_pane_command}" C-m
+  tmux send-keys -t "${session_name}":"${first_window_name}".2 "${base_pane_command}" C-m
+  tmux send-keys -t "${session_name}":"${first_window_name}".1 "${server_start_comand}"
+  tmux send-keys -t "${session_name}":"${first_window_name}".2 "${tests_start_comand}"
 }
 
 #######################
@@ -25,7 +31,7 @@ add_panes() {
 tmux_session_start() {
   if [ "${flag}" != '1' ] ;then
     echo "Session ${session_name} start..."
-    tmux new-session -s ${session_name} -n ${first_window_name} -d #имя сессии rails имя окна first создаем сессию и деатачимся
+    tmux new-session -s ${session_name} -n ${first_window_name} -d
     add_panes
   fi
 }
@@ -33,25 +39,25 @@ tmux_session_start() {
 #######################
 # Rails server start
 rails_server_start() {
-  tmux send-keys -t "${session_name}":1.2 C-m
+  tmux send-keys -t "${session_name}":"${first_window_name}".1 C-m
 }
 
 #######################
 # Guard start
 guard_tests_start() {
-  tmux send-keys -t "${session_name}":1.3 C-m
+  tmux send-keys -t "${session_name}":"${first_window_name}".2 C-m
 }
 
 #######################
-# Open project in Sublima Text
+# Open project in Sublime Text
 open_project() {
-  tmux send-keys -t "${session_name}":1.1 'rappo' C-m
+  tmux send-keys -t "${session_name}":"${first_window_name}".0 "${project_open_command}" C-m
 }
 
 #######################
 # Ruby console start
 ruby_console_start() {
-  tmux send-keys -t "${session_name}":1.1 'rails c' C-m
+  tmux send-keys -t "${session_name}":"${first_window_name}".0 "${console_open_command}" C-m
 }
 
 #######################
@@ -62,7 +68,7 @@ error_param() {
   echo "Parameter is incorrect! Avaliable parameters: 
       -s for start Rails server
       -t for start Gusrd server
-      -o for open project in Sublima Text
+      -o for open project in Sublime Text
       -c for open Ruby concole"
   exit 1
 }
@@ -105,7 +111,7 @@ done
 
 echo "Success!"
 tmux select-pane -L -t "${session_name}"
-tmux resize-pane -R -t "${session_name}":1.1 25
-tmux new-window  -n second -t "${session_name}"
-tmux select-window -t "${session_name}":1
+tmux resize-pane -R -t "${session_name}":"${first_window_name}".0 25
+tmux new-window  -n "${second_window_name}" -t "${session_name}"
+tmux select-window -t "${session_name}":"${first_window_name}"
 tmux attach -t "${session_name}"
