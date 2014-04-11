@@ -30,6 +30,7 @@
 `alias tmux-k='tmux kill-session'`  
 `alias tmux-ko='tmux kill-server'`  
 `alias tmux-l='tmux ls'`  
+`alias rrmm="git status --porcelain | sed -e 's/^[\sA-Z\?]*\s//' | xargs --delim='\n' rm -rfv"` 
  
 > После сохраниения *.bash_aliases* для вступления в силу новых алиасов необходимо перезапустить терминал
 
