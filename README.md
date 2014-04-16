@@ -1,9 +1,9 @@
-# Настроки Ubuntu 13.04 (нужные мне)
+## Настроки Ubuntu 13.04 (мои)
 
-Установка актуальной MonoDevelop - [monodevelop v4.1.7.md](https://github.com/akartynnik/ubuntu-settings/blob/master/monodevelop%20v4.1.7.md)
+Установка актуальной MonoDevelop - [monodevelop v4.1.7.md](https://github.com/akartynnik/ubuntu-settings/blob/master/monodevelop%20v4.1.7.md)  
 Установка актуального MySQL Workbench - [mysql-workbench 6.0.7.md](https://github.com/akartynnik/ubuntu-settings/blob/master/mysql-workbench%206.0.7.md)
 
-# Настроки Ubuntu 13.04 под Ruby on Rails (manual)
+## Настроки Ubuntu 13.04 под Ruby on Rails (manual)
 
 #### Выполняем
 `sudo apt-get install subl` - качаем Sublima Text 3 (или же собираем руками). Желательно его купить, что бы окошко о покупке не мазолило глаз.
