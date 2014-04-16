@@ -1,3 +1,6 @@
+Install MySql Workbench 6.0.7
+
+
 First of all:
 
     sudo apt-get remove mysql-workbench  
