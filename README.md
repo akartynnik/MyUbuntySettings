@@ -1,3 +1,8 @@
+# Настроки Ubuntu 13.04 (нужные мне)
+
+Установка актуальной MonoDevelop - [monodevelop v4.1.7.md](https://github.com/akartynnik/ubuntu-settings/blob/master/monodevelop%20v4.1.7.md)
+Установка актуального MySQL Workbench - [mysql-workbench 6.0.7.md](https://github.com/akartynnik/ubuntu-settings/blob/master/mysql-workbench%206.0.7.md)
+
 # Настроки Ubuntu 13.04 под Ruby on Rails (manual)
 
 #### Выполняем
@@ -87,4 +92,4 @@
 Можно запускать *tmux-s* как с одним так и с несколькими параметрами в любой последовательности. К примеру: `tmux-s -s -t` запустит новую сессию *tmux* а так же Rails-сервер и Guard+Spork
 
 #### Литература и ссылки:
-http://brainscraps.wikia.com/wiki/Resurrecting_tmux_Sessions_After_Reboot
+[Один из разделов WIKI tmux](http://brainscraps.wikia.com/wiki/Resurrecting_tmux_Sessions_After_Reboot)
