@@ -1,4 +1,4 @@
-First of all:  
+First of all:
 
     sudo apt-get remove mysql-workbench  
     sudo apt-get remove mysql-workbench-data
