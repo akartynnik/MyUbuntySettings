@@ -35,7 +35,7 @@
 `alias tmux-k='tmux kill-session'`  
 `alias tmux-ko='tmux kill-server'`  
 `alias tmux-l='tmux ls'`  
-`alias rrmm="git status --porcelain | sed -e 's/^[\sA-Z\?]*\s//' | xargs --delim='\n' rm -rfv"`
+`alias rrmm="git status --porcelain | sed -e 's/^[\sA-Z\?]*\s//' | xargs --delim='\n' rm -rfv"`  
 `alias hadij='find ./ -type f -iname '*.designer.cs' | xargs touch' #tiuch all designer files in folder and subfolder. Mono-bug kill`
  
 > После сохраниения *.bash_aliases* для вступления в силу новых алиасов необходимо перезапустить терминал
